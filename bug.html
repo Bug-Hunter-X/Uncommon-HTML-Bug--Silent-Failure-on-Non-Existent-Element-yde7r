@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly attempting to set innerHTML on a non-existent element
+    document.getElementById('nonExistentElement').innerHTML = "This text won't show.";
+
+    // Correctly setting innerHTML on an existing element
+    document.getElementById('myDiv').innerHTML += "<br>This text will show."; 
+  </script>
+</body>
+</html>
